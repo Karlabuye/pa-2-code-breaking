@@ -228,19 +228,22 @@ sum(ts_vec[500:955] >= 100)
 16. Take the square root of all numbers in indices 38 to 465.
 
 ```{r}
-ts_vec[___:___] <- ____(ts_vec[38:465])
+#| label: square secret but only from 38:465
+ts_vec[38:465] <- sqrt(ts_vec[38:465])
 ```
 
 17. Use the `round()` function to round all numbers to the nearest whole number.
 
 ```{r}
-ts_vec <- 
+#| label: ensuring roundness 
+ts_vec <- round(ts_vec)
 ```
 
 18. Replace all instances of the number 39 with 20. *Hint:* Step 18 requires another relational comparison, but this time it is equality. Equality in R is checked with a double equal sign rather than a single equal sign
 
 ```{r}
-ts_vec[ts_vec == ___ ] <- 
+#| label: sike its actually 20
+ts_vec[ts_vec == 39 ] <- 20
 ```
 
 **Checkpoint:** Headquarters has informed you that your final message should have 344 even numbers.
@@ -248,9 +251,9 @@ ts_vec[ts_vec == ___ ] <-
 *Hint:* Checking for divisibility is an interesting operation that isn't done much in R. Modulus is the operation you are interested in, where you are checking for whether the numbers are divisible by 2, with no remainder. See what you can find about modulus in R!
 
 ```{r}
-# Code to verify how many even numbers are in your top_secret vector
+#| label: how many even numbers in the top_secret vector
 
-___(ts_vec %% 2 == 0)
+sum(ts_vec %% 2 == 0)
 
 ```
 
