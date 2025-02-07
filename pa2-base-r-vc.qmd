@@ -89,13 +89,14 @@ my_symbols <- data.frame(symbol = my_symbols) #puts in a dataframe
 
 ```{r}
 #| label: total number of symbols in my_symbols
-len <- length(my_Symbols) #length 
+len <- length(my_symbols) #length determines the number of symbols
 ```
 
 5.  Create a new variable in your dataframe that assigns a number to each symbol.
 
 ```{r}
-my_symbols%Num <- 1:len
+#| label: new num variable in my_Symbols
+my_symbols$Num <- 1:len
 ```
 
 <!-- Developer Stage your Changes, Commit, and Push to the Git Repository-->
