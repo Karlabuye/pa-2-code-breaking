@@ -60,33 +60,36 @@ Each of the following R chunks will cause an error and / or do the desired task 
 1.  Create vectors containing the upper case letters, lower case letters, and some punctuation marks. add a label that indicate this code chunk creates the vectors of letters and punctuation.
 
 ```{r}
-
+#| label: the vectors of the letters of the alphabet and punctuation
 lower_case <- c("a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m",
-                "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z")
+                "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z") #lower case letters vector
 
-upper_case <- c("A", "B", "C", "D", "E", "F", "G", "H" "I", "J", "K", "L", "M",
-                "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z")
+upper_case <- c("A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M",
+                "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z") #upper case letters character vector
 
-punctuation <- c(".", ",", "!", "?", "'", '"', "(", ")", " ", "-", ";", ":")
+punctuation <- c(".", ",", "!", "?", "'", '"', "(", ")", " ", "-", ";", ":") # different punc's vector
 
 ```
 
 2.  Make **one** long **vector** containing all the symbols.
 
 ```{r}
-my_symbols <- (lower_case, upper_case, punctuation)
+#| label: combine my vectors into a beautiful vector
+my_symbols <- c(lower_case, upper_case, punctuation) #combines the vectors
 ```
 
 3.  Turn the `my_symbols` vector into a data frame, with one column named "symbol".
 
 ```{r}
-my_symbols <- dataframe(symbol = my_symbols)
+#| label: my old beautiful vector in a new data frame
+my_symbols <- data.frame(symbol = my_symbols) #puts in a dataframe
 ```
 
 4.  Find the total number of symbols we have in our data frame.
 
 ```{r}
-len <- length(my_Symbols)
+#| label: total number of symbols in my_symbols
+len <- length(my_Symbols) #length 
 ```
 
 5.  Create a new variable in your dataframe that assigns a number to each symbol.
